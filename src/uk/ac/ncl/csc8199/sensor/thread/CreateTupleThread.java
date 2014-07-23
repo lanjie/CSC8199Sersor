@@ -3,6 +3,7 @@ package uk.ac.ncl.csc8199.sensor.thread;
 import java.util.TimerTask;
 
 import uk.ac.ncl.csc8199.sensor.method.CreateTuple;
+import uk.ac.ncl.csc8199.sensor.socket.SensorSendSocket;
 
 
 /**   
@@ -24,7 +25,6 @@ public class CreateTupleThread extends TimerTask{
 	public void run() {
 		// TODO Auto-generated method stub
 		CreateTuple ct = new CreateTuple();
-		
 		for(int i = 0; i < 1; i++){
 		
 			ct.createTuple();

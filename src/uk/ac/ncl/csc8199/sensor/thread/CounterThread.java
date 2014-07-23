@@ -2,6 +2,8 @@ package uk.ac.ncl.csc8199.sensor.thread;
 
 import java.util.TimerTask;
 
+import uk.ac.ncl.csc8199.sensor.socket.SensorSendSocket;
+
 /**   
  *    
  * Project Name£ºCSC8199   
@@ -20,7 +22,8 @@ public class CounterThread extends TimerTask{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println(CreateTupleThread.counter);
+		System.out.println("Create: " + CreateTupleThread.counter);
+		System.out.println("Send: " + SensorSendSocket.counter);
 	}
 
 }

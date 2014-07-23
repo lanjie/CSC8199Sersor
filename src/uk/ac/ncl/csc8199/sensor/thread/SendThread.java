@@ -13,9 +13,14 @@ import uk.ac.ncl.csc8199.sensor.socket.SensorSendSocket;
  * @version    
  *    
  */
-public class SendThread extends TimerTask implements Runnable{
+public class SendThread extends TimerTask{
 
+	private int port;
 	
+	public SendThread(int port) {
+		
+		this.port = port;
+	}
 	 /* (non-Javadoc)
 	 * @see java.lang.Runnable#run()
 	 */
@@ -24,7 +29,7 @@ public class SendThread extends TimerTask implements Runnable{
 		// TODO Auto-generated method stub
 		SensorSendSocket sensorSendSocket = new SensorSendSocket();
 		try {
-			sensorSendSocket.createSendSocket();
+			sensorSendSocket.createSendSocket(port);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

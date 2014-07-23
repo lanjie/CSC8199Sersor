@@ -1,5 +1,6 @@
 package uk.ac.ncl.csc8199.model;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 /**   
@@ -11,8 +12,12 @@ import java.util.LinkedList;
  * @version    
  *    
  */
-public class TupleList {
+public class TupleList implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public static LinkedList<Tuple> tupleList = new LinkedList<>();
 	
 	public LinkedList<Tuple> getTupleList() {

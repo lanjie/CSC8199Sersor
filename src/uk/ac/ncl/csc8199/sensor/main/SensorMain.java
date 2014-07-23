@@ -2,8 +2,6 @@ package uk.ac.ncl.csc8199.sensor.main;
 
 import java.util.Timer;
 
-import uk.ac.ncl.csc8199.sensor.method.CreateTuple;
-import uk.ac.ncl.csc8199.sensor.socket.SensorSendSocket;
 import uk.ac.ncl.csc8199.sensor.thread.CounterThread;
 import uk.ac.ncl.csc8199.sensor.thread.CreateTupleThread;
 import uk.ac.ncl.csc8199.sensor.thread.SendThread;
@@ -22,9 +20,9 @@ public class SensorMain {
 	public static void main(String[] args) throws Exception {
 		
 		Timer timer = new Timer();
-		timer.schedule(new CreateTupleThread(), 0, 1);
-		timer.schedule(new SendThread(), 0, 1);
-		timer.schedule(new CounterThread(), 0, 1000);
+		timer.scheduleAtFixedRate(new CreateTupleThread(), 0, 1);
+		timer.scheduleAtFixedRate(new SendThread(1688), 0, 1);
+		timer.scheduleAtFixedRate(new CounterThread(), 0, 1000);
 		
 /*		CreateTuple createTuple = new CreateTuple();
 		createTuple.createTuple();
