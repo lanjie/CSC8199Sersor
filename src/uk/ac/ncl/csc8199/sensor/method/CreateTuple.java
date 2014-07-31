@@ -29,6 +29,7 @@ public class CreateTuple {
 		//tuple.setWaitingTime(1);
 		tuple.setWaitingTime(Math.abs(random.nextInt() % 10));
 		tuple.setTimestamp(System.currentTimeMillis());
+		tuple.setServiceId(Math.abs(random.nextInt() % 10));
 		TupleList.tupleList.add(tuple);
 		//System.out.println(TupleList.tupleList.size());
 		//System.out.println(tuple.toString());

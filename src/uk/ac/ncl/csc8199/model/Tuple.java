@@ -16,11 +16,19 @@ public class Tuple implements Serializable{
 	/**
 	 * 
 	 */
+	private static final long serialVersionUID = 8027484682903825945L;
 	public double waitingTime;
 	public long timestamp;
+	public int serviceId;
 	
 
 	
+	public int getServiceId() {
+		return serviceId;
+	}
+	public void setServiceId(int serviceId) {
+		this.serviceId = serviceId;
+	}
 	public double getWaitingTime() {
 		return waitingTime;
 	}
@@ -37,6 +45,6 @@ public class Tuple implements Serializable{
 	@Override
 	public String toString() {
 		return "Tuple [waitingTime=" + waitingTime + ", timestamp=" + timestamp
-				+ "]";
+				+ ", serviceId=" + serviceId + "]";
 	}
 }

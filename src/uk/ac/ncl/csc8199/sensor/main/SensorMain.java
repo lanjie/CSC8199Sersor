@@ -21,7 +21,7 @@ public class SensorMain {
 		
 		Timer timer = new Timer();
 		timer.scheduleAtFixedRate(new CreateTupleThread(), 0, 1);
-		timer.scheduleAtFixedRate(new SendThread(1688), 0, 1);
+		timer.scheduleAtFixedRate(new SendThread(1693), 0, 1);
 		timer.scheduleAtFixedRate(new CounterThread(), 0, 1000);
 		
 /*		CreateTuple createTuple = new CreateTuple();
