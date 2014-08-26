@@ -25,7 +25,7 @@ public class CreateTupleThread extends TimerTask{
 	public void run() {
 		// TODO Auto-generated method stub
 		CreateTuple ct = new CreateTuple();
-		for(int i = 0; i < 10; i++){
+		for(int i = 0; i < 3; i++){
 		
 			ct.createTuple();
 			counter++;
